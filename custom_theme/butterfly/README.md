@@ -1,13 +1,11 @@
-## butterfly
+## butterfly 4.5.0
 
-文件夹结构图如下： Updated: 2022/10/19
+文件夹结构图如下： Updated: 2022/10/21
 
 本文件夹内容方便主题升级使用，可以对比哪些内容经过修改
 
 ```
 custom_theme
-  │  README.md
-  │
   └─butterfly
       │  README.md
       │
@@ -17,13 +15,9 @@ custom_theme
       │      │      preconnect.pug
       │      │
       │      ├─loading
-      │      │  │  loading-js.pug
-      │      │  │  loading.pug
-      │      │  │
-      │      │  └─load_style
-      │      │          default.pug
-      │      │          gear.pug
-      │      │          image.pug
+      │      │      fullpage-loading.pug
+      │      │      index.pug
+      │      │      pace.pug
       │      │
       │      ├─page
       │      │  │  flink.pug
@@ -50,11 +44,6 @@ custom_theme
               │      head.styl
               │      loading.styl
               │      post.styl
-              │
-              ├─_load_style
-              │      default.styl
-              │      gear.styl
-              │      image.styl
               │
               ├─_mode
               │      readmode.styl
