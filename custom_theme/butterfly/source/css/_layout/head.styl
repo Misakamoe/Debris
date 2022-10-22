@@ -25,9 +25,7 @@
       padding: 0 10px
       width: 100%
 
-  #site-title,
-  #site-subtitle,
-  #scroll-down .scroll-down-effects
+  #site-title,#site-subtitle,#scroll-down .scroll-down-effects
     text-align: center
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .15)
     line-height: 1.5
@@ -137,9 +135,7 @@
       box-shadow: 0 5px 6px -5px alpha($grey, .6)
       transition: transform .2s ease-in-out, opacity .2s ease-in-out
 
-      a,
-      #site-name,
-      #toggle-menu
+      a,#site-name,#toggle-menu
         color: var(--font-color)
         text-shadow: none
 
@@ -173,13 +169,13 @@
       .post-edit-link
         float: right
 
-    #post-meta,
-    #post-meta a
+    #post-meta,#post-meta a
       color: #78818a
 
 #post-info
   .post-title
     @extend .limit-more-line
+
     margin-bottom: 8px
     color: var(--white)
     font-weight: normal
@@ -205,8 +201,7 @@
     +maxWidth768()
       font-size: 90%
 
-      > .meta-firstline,
-      > .meta-secondline
+      > .meta-firstline,> .meta-secondline
         display: inline
 
     .post-meta

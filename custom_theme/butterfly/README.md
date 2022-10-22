@@ -1,6 +1,6 @@
 ## butterfly 4.5.0
 
-文件夹结构图如下： Updated: 2022/10/21
+文件夹结构图如下： Updated: 2022/10/22
 
 本文件夹内容方便主题升级使用，可以对比哪些内容经过修改
 
@@ -32,8 +32,6 @@ custom_theme
       │
       └─source
           └─css
-              │  var.styl
-              │
               ├─_flink_style
               │      butterfly.styl
               │      flexcard.styl
