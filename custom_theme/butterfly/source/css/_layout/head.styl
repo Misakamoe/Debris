@@ -25,7 +25,7 @@
       padding: 0 10px
       width: 100%
 
-  #site-title,#site-subtitle,#scroll-down .scroll-down-effects
+  #site-title, #site-subtitle, #scroll-down .scroll-down-effects
     text-align: center
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .15)
     line-height: 1.5
@@ -122,7 +122,7 @@
       background: rgba(255, 255, 255, .8)
       box-shadow: 0 5px 6px -5px rgba(133, 133, 133, .6)
 
-      a
+      a, .site-name
         color: var(--font-color)
         text-shadow: none
 
@@ -135,14 +135,28 @@
       box-shadow: 0 5px 6px -5px alpha($grey, .6)
       transition: transform .2s ease-in-out, opacity .2s ease-in-out
 
-      a,#site-name,#toggle-menu
+      #blog-info
+        color: var(--font-color)
+
+        &:hover
+          color: $light-blue
+
+        .site-name
+          text-shadow: none
+
+      a, #toggle-menu
         color: var(--font-color)
         text-shadow: none
 
         &:hover
           color: $light-blue
 
-  &.nav-visible
+    &.fixed
+      #nav
+        top: 0
+        transition: all .5s
+
+  &.nav-visible:not(.fixed)
     #nav
       transition: all .5s
       transform: translate3d(0, 100%, 0)
@@ -151,6 +165,19 @@
       & > .aside-content > .sticky_layout
         top: 70px
         transition: top .5s
+
+  &.fixed
+    #nav
+      position: fixed
+
+    & + .layout
+      & > .aside-content > .sticky_layout
+        top: 70px
+        transition: top .5s
+
+      #card-toc
+        .toc-content
+          max-height: calc(100vh - 170px)
 
 #page
   h1.page-title
@@ -169,13 +196,12 @@
       .post-edit-link
         float: right
 
-    #post-meta,#post-meta a
+    #post-meta, #post-meta a
       color: #78818a
 
 #post-info
   .post-title
     @extend .limit-more-line
-
     margin-bottom: 8px
     color: var(--white)
     font-weight: normal
@@ -201,7 +227,7 @@
     +maxWidth768()
       font-size: 90%
 
-      > .meta-firstline,> .meta-secondline
+      > .meta-firstline, > .meta-secondline
         display: inline
 
     .post-meta
@@ -248,8 +274,15 @@
   &.show
     opacity: 1
 
-  #blog_name
+  #blog-info
     flex: 1
+    color: var(--light-grey)
+    @extend .limit-one-line
+
+    .site-icon
+      margin-right: 6px
+      height: 36px
+      vertical-align: middle
 
   #toggle-menu
     display: none
@@ -265,10 +298,9 @@
     &:hover
       color: var(--white)
 
-  #site-name
+  .site-name
     text-shadow: 2px 2px 4px rgba($dark-black, .15)
     font-weight: bold
-    cursor: pointer
 
   .menus_items
     display: inline
