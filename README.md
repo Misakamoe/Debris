@@ -1,6 +1,6 @@
 ## [My blog](https://blog.mska.ink/) 部分资源的备份仓库
 
-- [x] blog_cdn : 4 月 28 日 [jsDelivr](https://www.jsdelivr.com/) CDN 被 GFW 污染导致大陆大范围不能正常使用，考虑到 GFW 未来的动作和 Blog 的加载速度，对调用的部分 css 和 js 做了本地备份，并更换了 CDN 。
+- [ ] ~~blog_cdn~~ : 4 月 28 日 [jsDelivr](https://www.jsdelivr.com/) CDN 被 GFW 污染导致大陆大范围不能正常使用，~~对调用的部分 css 和 js 做了本地备份~~（已全部更换到大陆可用公共 CDN） 。
 
 - [ ] ~~blog_img~~ : 原 Blog 图床，考虑到图片访问速度及对仓库的滥用，已迁移。
 
