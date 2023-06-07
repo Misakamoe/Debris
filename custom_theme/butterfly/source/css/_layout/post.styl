@@ -9,7 +9,12 @@ beautify()
     &:hover
       padding-left: unit(fontsize + 18, 'px')
 
-  h1,h2,h3,h4,h5,h6
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
     transition: all .2s ease-out
 
     &:before
@@ -19,7 +24,6 @@ beautify()
       content: $title-prefix-icon
       line-height: 1
       transition: all .2s ease-out
-
       @extend .fontawesomeIcon
 
     &:hover
@@ -44,7 +48,8 @@ beautify()
   h6
     headStyle(12)
 
-  ol,ul
+  ol,
+  ul
     p
       margin: 0 0 8px
 
@@ -60,6 +65,9 @@ beautify()
 
   ul > li
     list-style-type: circle
+  
+  hr
+    @extend .custom-hr
 
 #article-container
   word-wrap: break-word
@@ -101,7 +109,6 @@ beautify()
     a.headerlink
       &:after
         @extend .fontawesomeIcon
-
         float: right
         color: var(--headline-presudo)
         content: $archor-button-icon
@@ -117,14 +124,21 @@ beautify()
         &:after
           opacity: 0
 
-      h1,h2,h3,h4,h5,h6
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6
         &:hover
           a.headerlink
             &:after
               opacity: 1
 
-  ol,ul
-    ol,ul
+  ol,
+  ul
+    ol,
+    ul
       padding-left: 20px
 
     li
@@ -133,15 +147,18 @@ beautify()
     p
       margin: 0 0 8px
 
+  > :last-child
+    margin-bottom: 0 !important
+
+  hr
+    margin: 20px 0
+
   if hexo-config('beautify.enable')
     if hexo-config('beautify.field') == 'site'
       beautify()
     else if hexo-config('beautify.field') == 'post'
       &.post-content
         beautify()
-
-  > :last-child
-    margin-bottom: 0 !important
 
 #post
   .tag_share
@@ -197,14 +214,13 @@ beautify()
 
     &:before
       @extend .fontawesomeIcon
-
-      background: var(--heo-post-blockquote-bg)
       position: absolute
-      right: -26px
       top: -120px
+      right: -26px
+      color: $theme-color
       content: '\f54c'
       font-size: 200px
-      opacity: .2
+      opacity: .5
 
     &:hover
       box-shadow: 0 0 8px 0 rgba(181, 202, 160, .6), 0 2px 4px 0 rgba(181, 202, 160, .6)
@@ -241,7 +257,6 @@ beautify()
 
       &:before
         @extend .fontawesomeIcon
-
         position: absolute
         top: 50%
         left: .9em
@@ -258,13 +273,14 @@ beautify()
       width: fit-content
       padding: 2px 5px
 
-[data-theme='dark'],#post
-  .post-copyright
-    background-color: #07080a
-    text-shadow: #bfbeb8 0 0 2px
-    border: 1px solid rgb(19 18 18 / 35%)
-    box-shadow: 0 0 5px rgb(181, 202, 160)
-    animation: flashlight 1s linear infinite alternate
+[data-theme='dark']
+  #post
+    .post-copyright
+      background-color: #07080a
+      text-shadow: #bfbeb8 0 0 2px
+      border: 1px solid rgb(19 18 18 / 35%)
+      box-shadow: 0 0 5px rgb(181, 202, 160)
+      animation: flashlight 1s linear infinite alternate
 
   .post-copyright-info
     color: #e0e0e4

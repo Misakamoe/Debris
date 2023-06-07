@@ -54,8 +54,7 @@ if hexo-config('readmode')
       display: none
 
     #page-header.post-bg
-      background-color: transparent
-      background-image: none !important
+      background: none !important
 
       &:before
         opacity: 0
@@ -74,14 +73,14 @@ if hexo-config('readmode')
     & > canvas
       display: none !important
 
-    .highlight-tools,#footer,#post > *:not(#post-info):not(.post-content),#nav,.post-outdate-notice,#web_bg,#rightside,.not-top-img
+    .highlight-tools, #footer, #post > *:not(#post-info):not(.post-content), #nav, .post-outdate-notice, #web_bg, #rightside, .not-top-img
       display: none !important
 
     #article-container
       a
         color: #99a9bf
 
-      pre,.highlight:not(.js-file-line-container)
+      pre, .highlight:not(.js-file-line-container)
         background: var(--highlight-bg) !important
 
         *
@@ -98,9 +97,9 @@ if hexo-config('readmode')
           color: var(--font-color) !important
 
         .hljs
-          background: var(-highlight-bg) !important
+          background: var(--highlight-bg) !important
 
-      h1,h2,h3,h4,h5,h6
+      h1, h2, h3, h4, h5, h6
         padding: 0
 
         &:before
@@ -109,11 +108,11 @@ if hexo-config('readmode')
         &:hover
           padding: 0
 
-      ul,li,ol
+      ul, li, ol
         &:hover:before
           transform: none !important
 
-      ol,li
+      ol, li
         &:before
           background: transparent !important
           color: var(--font-color) !important
@@ -162,7 +161,7 @@ if hexo-config('readmode')
       .hide-toggle
         border: 1px solid var(--gray) !important
 
-      .hide-button,.btn-beautify,.hl-label
+      .hide-button, .btn-beautify, .hl-label
         border: 1px solid var(--gray) !important
         background: var(--readmode-light-color) !important
         color: var(--font-color) !important
@@ -174,5 +173,5 @@ if hexo-config('readmode')
         background-color: var(--readmode-light-color) !important
         color: var(--font-color)
 
-        &:before,.note-icon
+        &:before, .note-icon
           color: var(--font-color)
