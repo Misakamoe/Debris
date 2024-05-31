@@ -50,7 +50,6 @@ if hexo-config('preloader.enable') && hexo-config('preloader.source') == 1
       width: 100px
       height: 100px
       transform-origin: 50px 50px
-      -webkit-animation: rotate 10s infinite linear
       animation: rotate 10s infinite linear
 
       div
@@ -76,7 +75,6 @@ if hexo-config('preloader.enable') && hexo-config('preloader.source') == 1
           border-radius: 100%
           background: white
           position: absolute
-          position: absolute
           left: 0
           right: 0
           top: 0
@@ -86,12 +84,12 @@ if hexo-config('preloader.enable') && hexo-config('preloader.source') == 1
     .gear-loader_cogs__left
       position: relative
       width: 80px
-      transform: rotate(16deg)
-      top: 28px
-      transform-origin: 40px 40px
-      animation: rotate_left 10s .1s infinite reverse linear
-      left: -24px
       height: 80px
+      top: 28px
+      left: -24px
+      transform-origin: 40px 40px
+      transform: rotate(16deg)
+      animation: rotate_left 10s .1s infinite reverse linear
 
       div
         &:nth-of-type(1)
@@ -116,7 +114,6 @@ if hexo-config('preloader.enable') && hexo-config('preloader.source') == 1
           border-radius: 100%
           background: white
           position: absolute
-          position: absolute
           left: 0
           right: 0
           top: 0
@@ -126,13 +123,12 @@ if hexo-config('preloader.enable') && hexo-config('preloader.source') == 1
     .gear-loader_cogs__bottom
       position: relative
       width: 60px
-      top: -65px
-      transform-origin: 30px 30px
-      -webkit-animation: rotate_left 10.2s .4s infinite linear
-      animation: rotate_left 10.2s .4s infinite linear
-      transform: rotate(4deg)
-      left: 79px
       height: 60px
+      top: -65px
+      left: 79px
+      transform-origin: 30px 30px
+      transform: rotate(4deg)
+      animation: rotate_left 10.2s .4s infinite linear
 
       div
         &:nth-of-type(1)
@@ -157,7 +153,6 @@ if hexo-config('preloader.enable') && hexo-config('preloader.source') == 1
           border-radius: 100%
           background: white
           position: absolute
-          position: absolute
           left: 0
           right: 0
           top: 0
@@ -172,33 +167,12 @@ if hexo-config('preloader.enable') && hexo-config('preloader.source') == 1
     to
       transform: rotate(360deg)
 
-  @keyframes rotate
-    from
-      transform: rotate(0deg)
-
-    to
-      transform: rotate(360deg)
-
   @keyframes rotate_left
     from
       transform: rotate(16deg)
 
     to
       transform: rotate(376deg)
-
-  @keyframes rotate_left
-    from
-      transform: rotate(16deg)
-
-    to
-      transform: rotate(376deg)
-
-  @keyframes rotate_right
-    from
-      transform: rotate(4deg)
-
-    to
-      transform: rotate(364deg)
 
   @keyframes rotate_right
     from

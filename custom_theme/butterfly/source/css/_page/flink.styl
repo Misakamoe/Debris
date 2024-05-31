@@ -1,6 +1,3 @@
-if hexo-config('flink_style') == 'butterfly'
-  @import './_flink_style/butterfly'
-else if hexo-config('flink_style') == 'volantis'
-  @import './_flink_style/volantis'
-else if hexo-config('flink_style') == 'flexcard'
-  @import './_flink_style/flexcard'
+flink_style = hexo-config('flink_style')
+
+@import './_flink_style/' + flink_style
