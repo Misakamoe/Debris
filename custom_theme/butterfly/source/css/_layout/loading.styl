@@ -159,6 +159,14 @@ if hexo-config('preloader.enable') && hexo-config('preloader.source') == 1
           bottom: 0
           margin: auto
 
+  [data-theme='dark']
+    #loading-box
+      .gear-loader_overlay
+        box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, .67), 0px 0px 19px 0px rgba(255, 255, 255, .16) inset
+
+      .gear-loader_cogs__top .gear-top_hole, .gear-loader_cogs__left .gear-left_hole, .gear-loader_cogs__bottom .gear-bottom_hole
+        background: #07080a
+
   /* Animations */
   @keyframes rotate
     from
