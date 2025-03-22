@@ -15,7 +15,7 @@ if hexo-config('readmode')
 
   [data-theme='dark']
     .read-mode
-      --font-color: rgba(255, 255, 255, .9)
+      --font-color: rgba(255, 255, 255, .7)
       --readmode-light-color: #0d0d0d
       --white: rgba(255, 255, 255, .9)
       --light-grey: rgba(255, 255, 255, .7)
@@ -37,11 +37,11 @@ if hexo-config('readmode')
       z-index: 100
       width: 40px
       height: 40px
-      border-radius: 8px
       background: var(--exit-btn-bg)
       color: var(--exit-btn-color)
       font-size: 16px
       transition: background .3s
+      addBorderRadius(8)
 
       +maxWidth768()
         top: initial
@@ -73,14 +73,22 @@ if hexo-config('readmode')
     & > canvas
       display: none !important
 
-    .highlight-tools, #footer, #post > *:not(#post-info):not(.post-content), #nav, .post-outdate-notice, #web_bg, #rightside, .not-top-img
+    .highlight-tools,
+    #footer,
+    #post > *:not(#post-info):not(.post-content),
+    #nav,
+    #post-outdate-notice,
+    #web_bg,
+    #rightside,
+    .not-top-img
       display: none !important
 
-    #article-container
+    .container
       a
         color: #99a9bf
 
-      pre, .highlight:not(.js-file-line-container)
+      pre,
+      .highlight:not(.js-file-line-container)
         background: var(--highlight-bg) !important
 
         *
@@ -99,7 +107,12 @@ if hexo-config('readmode')
         .hljs
           background: var(--highlight-bg) !important
 
-      h1, h2, h3, h4, h5, h6
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6
         padding: 0
 
         &:before
@@ -108,11 +121,14 @@ if hexo-config('readmode')
         &:hover
           padding: 0
 
-      ul, li, ol
+      ul,
+      li,
+      ol
         &:hover:before
           transform: none !important
 
-      ol, li
+      ol,
+      li
         &:before
           background: transparent !important
           color: var(--font-color) !important
@@ -150,7 +166,9 @@ if hexo-config('readmode')
       .hide-toggle
         border: 1px solid var(--gray) !important
 
-      .hide-button, .btn-beautify, .hl-label
+      .hide-button,
+      .btn-beautify,
+      .hl-label
         border: 1px solid var(--gray) !important
         background: var(--readmode-light-color) !important
         color: var(--font-color) !important
@@ -162,5 +180,6 @@ if hexo-config('readmode')
         background-color: var(--readmode-light-color) !important
         color: var(--font-color)
 
-        &:before, .note-icon
+        &:before,
+        .note-icon
           color: var(--font-color)
